@@ -7,9 +7,11 @@ model User {
     password String
 
     name       String?
-    avatarPath String @default("/uploads/default-avatar.png") @map("avatar_path")
+    avatarPath String  @default("/uploads/default-avatar.png") @map("avatar_path")
+    phone      String  @default("")
 
-    phone String @default("")
+    favorites Product[]
+    orders    Order[]
 
     @@map("user")
 }
